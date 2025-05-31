@@ -1,0 +1,232 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #6F4E37;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  width: 120%;
+  max-width: 2000px; /* zwiększone max-width, by zmieścić szerokie side-panels */
+  gap: 20px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.side-panel {
+  width: 420px;
+  background-color: bisque;
+  border: 2px solid #c2b793;
+  border-radius: 31px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: sticky;
+  top: 20px;
+  height: 400px;
+}
+
+.side-panel iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: none;
+}
+
+.main-content {
+  flex: 1 1 auto;
+  min-width: 0; /* pozwala rosnąć i się prawidłowo skalować */
+  background-color: bisque;
+  border: 2px solid #c2b793;
+  border-radius: 31px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: large;
+}
+
+.panels {
+  margin-top: 5px;
+  height: 80px;
+  width: 100%;
+  border: 2px solid #c2b793;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 31px;
+  background-color: bisque;
+  margin-bottom: 20px;
+}
+
+.panels img {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.panels img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.github {
+  scale: 130%;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  height: 180px;
+  width: 100%;
+  border: 2px solid #c2b793;
+  border-radius: 31px;
+  background-color: bisque;
+  font-weight: 500;
+  margin-bottom: 20px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.info ul {
+  flex: 1;
+  margin-left: 10px;
+  padding-left: 20px;
+  overflow-y: auto;
+}
+
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.connor-frame {
+ margin-top: 10px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #5a3d25;
+  background-color: #6F4E37;
+}
+
+.connor-frame img {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.captionconnor {
+  font-weight: bold;
+  color: #6F4E37;
+  font-size: x-large;
+  margin: 0;
+  text-align: center;
+}
+
+.jezyki {
+  color: rgb(252, 95, 56);
+  font-size: large;
+}
+
+.div3 {
+  height: 80px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 31px;
+  background-color: bisque;
+  font-weight: 500;
+  margin: 0 auto;
+}
+
+.div4 {
+  margin-top: 15px;
+  height: 100px;
+  width: 40%;
+  border: 2px solid #c2b793;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 31px;
+  background-color: bisque;
+  font-weight: 500;
+  margin: 0 auto 20px auto;
+}
+
+.button1 {
+  height: 100px;
+  width: 320px;
+  border: 2px solid #6F4E37;
+  background-color: #6F4E37;
+  border-radius: 25px;
+  transition: transform 0.3s ease;
+  font-size: large;
+  font-family: 'Poppins', sans-serif;
+  color: wheat;
+}
+
+.button1:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: #9e7765;
+}
+
+#spotifyContainer {
+  width: 100%;
+  height: 352px;
+  border: 2px solid #c2b793;
+  border-radius: 31px;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.hidden-iframe {
+  opacity: 0;
+  transform: translateY(20px);
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: none;
+}
+
+.appear {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
